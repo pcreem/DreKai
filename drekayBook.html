@@ -22,23 +22,25 @@
       line-height: 1.8em;
       color: #414141;
       background-color: #EEEEEE;
-
-      display: flex;
-      justify-content: center;
     }
 
-    .cover {
+    /* cover */
+    .cover,
+    .page {
+      display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       border: 1px solid #D6D9DC;
-      height: 90vh;
-      margin: 50px auto;
+      height: fit-content;
+      width: 100vw;
+      padding: 20px auto;
     }
 
     article,
     footer {
-      margin: 50px;
+      padding: 50px 20px;
     }
 
     h1,
@@ -48,7 +50,43 @@
     }
 
     img {
-      height: 400px;
+      max-width: 100%;
+      height: auto;
+      padding: 0 20px;
+    }
+
+    figcaption {
+      font-size: 10px;
+      line-height: 0.5em;
+      text-align: right;
+      padding-right: 20px;
+    }
+
+    /* page */
+    .page article {
+      text-align: justify;
+    }
+
+    .page {
+      height: fit-content;
+      padding-bottom: 100px;
+    }
+
+    .page img {
+      padding: 0;
+    }
+
+    @media screen and (min-width: 768px) {
+      .page article {
+        text-align: justify;
+        margin: 50px auto;
+        width: 700px;
+      }
+
+      img {
+        width: 700px;
+      }
+
     }
   </style>
 </head>
@@ -60,12 +98,32 @@
       <h2>Asualalanga ki Ngudradrekai kisusu ki Yesu</h2>
     </article>
 
-    <img src="lily.png" />
+    <figure>
+      <img src="lily.png" />
+      <figcaption>canva AI cover</figcaption>
+    </figure>
+
 
     <footer>
       <p>圖：林冠宇</p>
       <p>文：陳松得</p>
     </footer>
+  </div>
+
+  <div class="page">
+    <article>
+      <p>一、福音尚未傳入魯凱族部落之前，傳統的禁忌規範影響著人們的生活、言行舉止受到束縛和限制，使人感到不自由。</p>
+      <p>Kai Ngudradrekai sakaiyana tarumara ku Hukuing.yakainga ku lrisililrini.kuamani ku tasingi kaiyanelini
+        luavavaga lungivelevele lamiakau kia kadrenge miakau kia kerenge.</p>
+      <br />
+      <p>二、早期魯凱族宗教信仰是泛靈的信仰。除了相信天上的神是創造宇宙萬物，還相信靈界的神明可以告知吉凶禍福，所以產生許多巫婆和祭司來祈求神的啟示。</p>
+      <p>Kai sidruadrumane ka Ngudradrekai ku taki susuanelini kia susu sanaka aidridringane .wathingale ka yakai ku
+        Twaumase ka yabelenge ka amani ku wabekace. lamialri kisusu ki sanaka nitu twaumasane ka aidridringane.lakamani
+        ku
+        tulrisilrisiliei. Kuaki pelaelane ku mathariri ku malisi.</p>
+    </article>
+
+    <img src="pictures/01.jpg">
   </div>
 
 </body>
